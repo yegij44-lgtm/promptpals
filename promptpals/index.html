@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PromptPals - Free AI Micro-Tools and Prompt Generators</title>
+<meta name="description" content="Free tools that build better prompts for ChatGPT and Claude: emails, study help, meal plans, budgets and more. No sign-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- ADSENSE: after approval, uncomment and add your own publisher ID (same line on every page):
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="index.html">PromptPals</a>
+  <nav><a href="index.html#tools">Tools</a><a href="guides.html">Guides</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><span class="badge" id="credits" title="Credits reset on the 1st of each month">500 credits</span><button class="btn mini" id="theme" aria-label="Switch light or dark mode">Dark</button></nav>
+</div></header>
+<main class="wrap" id="top">
+  <div class="hero">
+    <h1>AI micro-tools and prompt generators</h1>
+    <p>Fill in a few fields, get a structured prompt, and paste it into any AI app. Runs in your browser. No sign-up.</p>
+    <label class="search stick"><input id="q" type="search" placeholder="Search tools, e.g. email, meal plan, quiz" aria-label="Search tools"><kbd>/</kbd></label>
+    <div class="chips" id="chips"></div>
+    <p class="note">You get 500 free credits every month, plus 50 back for each new day you visit. Each tool shows its credit cost.</p>
+  </div>
+
+  <!-- AD SLOT 1: replace this box with your AdSense <ins> code -->
+  <div class="ad">Ad space (top banner)</div>
+
+  <div class="grid" id="tools"></div>
+
+  <section id="my">
+    <h2>My prompts</h2>
+    <div class="tabs">
+      <button class="chip" data-tab="saved" aria-pressed="true">Saved</button>
+      <button class="chip" data-tab="history" aria-pressed="false">Recent</button>
+    </div>
+    <div class="list" id="mylist"></div>
+  </section>
+
+  <!-- AD SLOT 2 -->
+  <div class="ad">Ad space (middle)</div>
+
+  <section id="templates">
+    <h2>Ready-made prompts</h2>
+    <div class="tpl" id="tpl"></div>
+  </section>
+</main>
+
+<dialog id="dlg" class="stick" aria-labelledby="dt">
+  <div class="dh"><h2 id="dt"></h2><button class="btn mini" id="x" aria-label="Close">Close</button></div>
+  <div class="db">
+    <div id="form" style="display:grid;gap:12px"></div>
+    <button class="btn mint" id="go">Generate prompt</button>
+    <label>Your prompt (editable)<textarea class="out" id="out" placeholder="Your prompt will show up here"></textarea></label>
+    <div class="row">
+      <button class="btn" id="copy">Copy</button>
+      <button class="btn" id="gpt">Open in ChatGPT</button>
+      <button class="btn" id="cl">Open in Claude</button>
+      <button class="btn" id="save">Save</button>
+    </div>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+<footer><div class="wrap"><span>PromptPals. Not affiliated with OpenAI or Anthropic.</span><span><a href="guides.html">Guides</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></span></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
